@@ -1,0 +1,106 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wp: <http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#> .
+@prefix person: <http://rdf.telegraph.co.uk/ontology/person#> .
+@prefix movie: <http://rdf.telegraph.co.uk/ontology/movies#Movie/> .
+@prefix movieOntology: <http://rdf.telegraph.co.uk/ontology/movies#Movie/> .
+@prefix actor: <http://rdf.telegraph.co.uk/ontology/person#Actor/> .
+@prefix director: <http://rdf.telegraph.co.uk/ontology/person#Director/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix genre: <http://rdf.telegraph.co.uk/ontology/movies#Genre/> .
+@prefix marriage: <http://rdf.telegraph.co.uk/ontology/person#Marriage/> .
+@prefix event: <http://rdf.telegraph.co.uk/ontology/event#> .
+
+actor:Johnny_Depp		rdf:type	person:Actor .
+actor:Johnny_Depp		foaf:Name	"Johnny Depp"@en .
+actor:Johnny_Depp		movieOntology:featuredIn	movie:Edward_Scissorhands .
+actor:Johnny_Depp		person:hasMarriage		marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012 .
+actor:Johnny_Depp		person:hasDateOfBirth	"1963" .
+actor:Johnny_Depp		foaf:gender				"Male" .
+actor:Johnny_Depp 		person:hasPlaceOfBirth	"USA"@en .
+
+actor:Marilyn_Monroe		rdf:type	person:Actor .
+actor:Marilyn_Monroe		foaf:Name	"Marilyn Monroe"@en .
+actor:Marilyn_Monroe		movieOntology:featuredIn	movie:Some_Like_it_Hot .
+actor:Marilyn_Monroe		person:hasDateOfBirth	"1926" .
+actor:Marilyn_Monroe		foaf:gender				"Female" .
+actor:Marilyn_Monroe		person:hasMarriage		marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954 .
+actor:Marilyn_Monroe 		person:hasPlaceOfBirth	"USA"@en .
+
+actor:Chiwetel_Ejiofor		rdf:type	person:Actor .
+actor:Chiwetel_Ejiofor		foaf:Name	"Chiwetel Ejiofor"@en .
+actor:Chiwetel_Ejiofor		movieOntology:featuredIn	movie:12_Years_a_Slave .
+actor:Chiwetel_Ejiofor		movieOntology:featuredIn	movie:Serenity .
+actor:Chiwetel_Ejiofor		person:hasDateOfBirth	"1977" .
+actor:Chiwetel_Ejiofor		foaf:gender				"Male" .
+actor:Chiwetel_Ejiofor 		person:hasPlaceOfBirth	"UK"@en .
+
+actor:Vanessa_Paradis		rdf:type	person:Actor .
+actor:Vanessa_Paradis		foaf:Name	"Vanessa Paradis"@en .
+actor:Vanessa_Paradis		person:hasDateOfBirth	"1972" .
+actor:Vanessa_Paradis		foaf:gender				"Female" .
+actor:Vanessa_Paradis 		person:hasPlaceOfBirth	"France"@en .
+
+person:Joe_DiMaggio			rdf:type	foaf:Person .
+person:Joe_DiMaggio			foaf:Name	"Joe DiMaggio"@en .
+person:Joe_DiMaggio			person:hasDateOfBirth	"1914" .
+person:Joe_DiMaggio			foaf:gender				"Male" .
+person:Joe_DiMaggio 		person:hasPlaceOfBirth	"USA"@en .
+
+director:Steve_McQueen		rdf:type	person:Director .
+director:Steve_McQueen		foaf:Name	"Steve McQueen"@en .
+director:Steve_McQueen		person:hasDateOfBirth	"1969" .
+director:Steve_McQueen		foaf:gender				"Male" .
+director:Steve_McQueen		movieOntology:directed	movie:12_Years_a_Slave .
+director:Steve_McQueen 		person:hasPlaceOfBirth	"UK"@en .
+
+director:Tim_Burton		rdf:type	person:Director .
+director:Tim_Burton		foaf:Name	"Tim Burton"@en .
+director:Tim_Burton		person:hasDateOfBirth	"1958" .
+director:Tim_Burton		foaf:gender				"Male" .
+director:Tim_Burton		movieOntology:directed	movie:Edward_Scissorhands .
+director:Tim_Burton 		person:hasPlaceOfBirth	"USA"@en .
+
+director:Billy_Wilder		rdf:type	person:Director .
+director:Billy_Wilder		foaf:Name	"Billy Wilder"@en .
+director:Billy_Wilder		person:hasDateOfBirth	"1906" .
+director:Billy_Wilder		foaf:gender				"Male" .
+director:Billy_Wilder		movieOntology:directed	movie:Some_Like_it_Hot .
+director:Billy_Wilder 		person:hasPlaceOfBirth	"Austria-Hungary"@en .
+
+movie:Some_Like_it_Hot		rdf:type					movieOntology:Movie .
+movie:Some_Like_it_Hot		dc:title					"Some Like it Hot"@en .
+movie:Some_Like_it_Hot		dc:language					"English"@en .
+movie:Some_Like_it_Hot		movieOntology:hasGenre 		genre:Comedy .
+movie:Some_Like_it_Hot		dc:date						"1959" .
+
+movie:Edward_Scissorhands		rdf:type					movieOntology:Movie .
+movie:Edward_Scissorhands		dc:title					"Edward Scissorhands"@en .
+movie:Edward_Scissorhands		dc:language					"English"@en .
+movie:Edward_Scissorhands		movieOntology:hasGenre 		genre:Drama .
+movie:Edward_Scissorhands		dc:date						"1990" .
+
+movie:12_Years_a_Slave		rdf:type					movieOntology:Movie .
+movie:12_Years_a_Slave		dc:title					"12 Years a Slave"@en .
+movie:12_Years_a_Slave		dc:language					"English"@en .
+movie:12_Years_a_Slave		movieOntology:hasGenre 		genre:Drama .
+movie:12_Years_a_Slave		dc:date						"2013" .
+
+movie:Serenity		rdf:type					movieOntology:Movie .
+movie:Serenity		dc:title					"Serenity"@en .
+movie:Serenity		dc:language					"English"@en .
+movie:Serenity		movieOntology:hasGenre 		genre:Sci-Fi .
+movie:Serenity		dc:date						"2005" .
+
+marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		rdf:type	person:Marriage .
+marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		person:marriageTo	actor:Vanessa_Paradis .
+marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		event:begins		"1998" .
+marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		event:ends		"2012" .
+
+marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		rdf:type	person:Marriage .
+marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		person:marriageTo	person:Joe_DiMaggio .
+marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		event:begins		"1954" .
+marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		event:ends		"1954" .
