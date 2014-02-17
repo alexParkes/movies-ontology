@@ -99,7 +99,7 @@
 
 <http://xmlns.com/foaf/0.1/familyName> rdf:type owl:DatatypeProperty ;
                                        
-                                       rdfs:label "family name"@en ;
+                                       rdfs:label "has family name"@en ;
                                        
                                        rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology#hasName> ;
                                        
@@ -113,7 +113,7 @@
 
 <http://xmlns.com/foaf/0.1/gender> rdf:type owl:DatatypeProperty ;
                                    
-                                   rdfs:label "gender"@en ;
+                                   rdfs:label "has gender"@en ;
                                    
                                    rdfs:range xsd:string ;
                                    
@@ -125,7 +125,7 @@
 
 <http://xmlns.com/foaf/0.1/givenName> rdf:type owl:DatatypeProperty ;
                                       
-                                      rdfs:label "given name"@en ;
+                                      rdfs:label "has given name"@en ;
                                       
                                       rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology#hasName> ;
                                       
