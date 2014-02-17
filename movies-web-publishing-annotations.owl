@@ -18,43 +18,13 @@
 #################################################################
 
 
-###  http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#data
+###  http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#publish
 
-:data rdf:type owl:AnnotationProperty ;
-      
-      rdfs:label "data"@en .
-
-
-
-###  http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#object
-
-:object rdf:type owl:AnnotationProperty ;
-        
-        rdfs:label "object"@en .
-
-
-
-###  http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#prefix
-
-:prefix rdf:type owl:AnnotationProperty ;
-        
-        rdfs:label "prefix"@en .
-
-
-
-###  http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#publishAs
-
-:publishAs rdf:type owl:AnnotationProperty ;
-           
-           rdfs:label "publish as"@en .
-
-
-
-###  http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#suffix
-
-:suffix rdf:type owl:AnnotationProperty ;
-        
-        rdfs:label "suffix"@en .
+:publish rdf:type owl:AnnotationProperty ;
+         
+         rdfs:label "publish"@en ;
+         
+         rdfs:range xsd:boolean .
 
 
 
@@ -67,83 +37,75 @@
 #################################################################
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#includesMovie> :publishAs :object .
+<http://rdf.telegraph.co.uk/ontology/movies#includesMovie> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#marriageTo> :publishAs :object .
+<http://rdf.telegraph.co.uk/ontology/person#marriageTo> :publish "true"^^xsd:boolean .
 
 
 
-<http://xmlns.com/foaf/0.1/gender> :publishAs :data .
+<http://xmlns.com/foaf/0.1/gender> :publish "true"^^xsd:boolean .
 
 
 
-<http://purl.org/dc/elements/1.1/language> :publishAs :data .
+<http://purl.org/dc/elements/1.1/language> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasEndDate> :publishAs :data .
+<http://rdf.telegraph.co.uk/ontology/person#hasMarriage> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasMarriage> :publishAs :object .
+<http://rdf.telegraph.co.uk/ontology/person#hasEndDate> :publish :data .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#directedBy> :publishAs :object .
+<http://rdf.telegraph.co.uk/ontology/movies#directedBy> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasStartDate> :publishAs :data .
+<http://rdf.telegraph.co.uk/ontology/person#hasStartDate> :publish :data .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasPlaceOfBirth> :publishAs :data .
+<http://rdf.telegraph.co.uk/ontology/person#hasPlaceOfBirth> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#hasOriginalTitle> :publishAs :data .
+<http://rdf.telegraph.co.uk/ontology/movies#hasOriginalTitle> :publish "true"^^xsd:boolean .
 
 
 
-<http://xmlns.com/foaf/0.1/familyName> :publishAs :data .
+<http://rdf.telegraph.co.uk/ontology/movies#featured> :publish "true"^^xsd:boolean .
 
 
 
-<http://xmlns.com/foaf/0.1/givenName> :publishAs :data .
+<http://rdf.telegraph.co.uk/ontology/movies#directed> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#featured> :publishAs :object .
+<http://rdf.telegraph.co.uk/ontology#hasName> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology#hasName> :publishAs :data .
+<http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#directed> :publishAs :object .
+<http://rdf.telegraph.co.uk/ontology/movies#hasGenre> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth> :publishAs :data .
+<http://purl.org/dc/elements/1.1/title> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#hasGenre> :publishAs :object .
+<http://rdf.telegraph.co.uk/ontology/movies#hasOriginalLanguage> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#featuredIn> :publishAs :object .
-
-
-
-<http://purl.org/dc/elements/1.1/title> :publishAs :data .
-
-
-
-<http://rdf.telegraph.co.uk/ontology/movies#hasOriginalLanguage> :publishAs :data .
+<http://rdf.telegraph.co.uk/ontology/movies#featuredIn> :publish "true"^^xsd:boolean .
 
 
 
