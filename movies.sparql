@@ -1,0 +1,29 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wp: <http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#>
+
+
+
+SELECT ?predicateLabel ?objectLabel ?property
+
+WHERE { {
+	
+$entity			?predicate 		?property .
+?predicate 		rdf:type 		owl:DatatypeProperty .
+?precicate		wp:publish 		"true"^^xsd:boolean .
+?predicate 		rdfs:label 		?predicateLabel
+
+} UNION {
+
+$entity					?predicate 			?object .
+?predicate 				rdf:type			owl:ObjectProperty .
+?predicate 				wp:publish 			"true"^^xsd:boolean .
+?object 				?objectPredicate 	?property .
+?objectPredicate 		rdf:type 			owl:DatatypeProperty .
+?objectPredicate 		wp:publish 			"true"^^xsd:boolean .
+?object 				rdfs:label 			?objectLabel .
+?objectPredicate 		rdfs:label 			?predicateLabel
+
+} }
