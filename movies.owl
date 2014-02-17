@@ -1,0 +1,199 @@
+@prefix : <http://rdf.telegraph.co.uk/ontology/movies#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rdf.telegraph.co.uk/ontology/movies> .
+
+<http://rdf.telegraph.co.uk/ontology/movies> rdf:type owl:Ontology ;
+                                             
+                                             owl:imports <http://rdf.telegraph.co.uk/ontology/Person> .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#directed
+
+:directed rdf:type owl:AsymmetricProperty ,
+                   owl:ObjectProperty ;
+          
+          rdfs:label "directed"@en ;
+          
+          rdfs:range :Movie ;
+          
+          rdfs:domain <http://rdf.telegraph.co.uk/ontology/person#Director> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#directedBy
+
+:directedBy rdf:type owl:AsymmetricProperty ,
+                     owl:ObjectProperty ;
+            
+            rdfs:label "directed by"@en ;
+            
+            rdfs:domain :Movie ;
+            
+            owl:inverseOf :directed ;
+            
+            rdfs:range <http://rdf.telegraph.co.uk/ontology/person#Director> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#featured
+
+:featured rdf:type owl:AsymmetricProperty ,
+                   owl:ObjectProperty ;
+          
+          rdfs:label "featured"@en ;
+          
+          rdfs:domain :Movie ;
+          
+          owl:inverseOf :featuredIn ;
+          
+          rdfs:range <http://rdf.telegraph.co.uk/ontology/person#Actor> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#featuredIn
+
+:featuredIn rdf:type owl:AsymmetricProperty ,
+                     owl:ObjectProperty ;
+            
+            rdfs:label "featured in"@en ;
+            
+            rdfs:range :Movie ;
+            
+            rdfs:domain <http://rdf.telegraph.co.uk/ontology/person#Actor> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#hasGenre
+
+:hasGenre rdf:type owl:AsymmetricProperty ,
+                   owl:ObjectProperty ;
+          
+          rdfs:label "has genre"@en ;
+          
+          rdfs:range :Genre ;
+          
+          rdfs:domain :Movie .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#includesMovie
+
+:includesMovie rdf:type owl:AsymmetricProperty ,
+                        owl:ObjectProperty ;
+               
+               rdfs:label "includes movie"@en ;
+               
+               rdfs:domain :Genre ;
+               
+               rdfs:range :Movie ;
+               
+               owl:inverseOf :hasGenre .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://purl.org/dc/elements/1.1/language
+
+<http://purl.org/dc/elements/1.1/language> rdf:type owl:DatatypeProperty ;
+                                           
+                                           rdfs:label "has language"@en ;
+                                           
+                                           rdfs:comment "Use this properties for all languages stated in metadata for the movie."@en ;
+                                           
+                                           rdfs:domain :Movie ;
+                                           
+                                           rdfs:range xsd:string .
+
+
+
+###  http://purl.org/dc/elements/1.1/title
+
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty ;
+                                        
+                                        rdfs:label "has title"@en ;
+                                        
+                                        rdfs:comment "This property is only for the English language title. Please see the sub-property for original title if not English."@en ;
+                                        
+                                        rdfs:domain :Movie ;
+                                        
+                                        rdfs:range xsd:string .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#hasOriginalLanguage
+
+:hasOriginalLanguage rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     
+                     rdfs:label "has original language"@en ;
+                     
+                     rdfs:comment "Please use this property for the original language, if version referred to is in translation."@en ;
+                     
+                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/language> ;
+                     
+                     rdfs:domain :Movie ;
+                     
+                     rdfs:range xsd:string .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#hasOriginalTitle
+
+:hasOriginalTitle rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  
+                  rdfs:label "has original title"@en ;
+                  
+                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> ;
+                  
+                  rdfs:domain :Movie ;
+                  
+                  rdfs:range xsd:string .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#Genre
+
+:Genre rdf:type owl:Class ;
+       
+       rdfs:label "Genre"@en .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#Movie
+
+:Movie rdf:type owl:Class .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
