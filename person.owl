@@ -57,18 +57,6 @@
 #################################################################
 
 
-###  http://rdf.telegraph.co.uk/ontology#hasName
-
-<http://rdf.telegraph.co.uk/ontology#hasName> rdf:type owl:DatatypeProperty ;
-                                              
-                                              rdfs:label "has name"@en ;
-                                              
-                                              rdfs:range xsd:string ;
-                                              
-                                              rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
-
-
-
 ###  http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth
 
 :hasDateOfBirth rdf:type owl:DatatypeProperty ,
@@ -95,15 +83,27 @@
 
 
 
+###  http://xmlns.com/foaf/0.1/Name
+
+<http://xmlns.com/foaf/0.1/Name> rdf:type owl:DatatypeProperty ;
+                                 
+                                 rdfs:label "has name"@en ;
+                                 
+                                 rdfs:range xsd:string ;
+                                 
+                                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
+
+
 ###  http://xmlns.com/foaf/0.1/familyName
 
 <http://xmlns.com/foaf/0.1/familyName> rdf:type owl:DatatypeProperty ;
                                        
                                        rdfs:label "has family name"@en ;
                                        
-                                       rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology#hasName> ;
-                                       
                                        rdfs:range xsd:string ;
+                                       
+                                       rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/Name> ;
                                        
                                        rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
 
@@ -127,9 +127,9 @@
                                       
                                       rdfs:label "has given name"@en ;
                                       
-                                      rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology#hasName> ;
-                                      
                                       rdfs:range xsd:string ;
+                                      
+                                      rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/Name> ;
                                       
                                       rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
 

@@ -37,11 +37,11 @@
 #################################################################
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#includesMovie> :publish "true"^^xsd:boolean .
-
-
-
 <http://rdf.telegraph.co.uk/ontology/person#marriageTo> :publish "true"^^xsd:boolean .
+
+
+
+<http://rdf.telegraph.co.uk/ontology/movies#includesMovie> :publish "true"^^xsd:boolean .
 
 
 
@@ -50,6 +50,10 @@
 
 
 <http://purl.org/dc/elements/1.1/language> :publish "true"^^xsd:boolean .
+
+
+
+<http://xmlns.com/foaf/0.1/Name> :publish "true"^^xsd:boolean .
 
 
 
@@ -81,15 +85,11 @@
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#directed> :publish "true"^^xsd:boolean .
-
-
-
 <http://rdf.telegraph.co.uk/ontology#hasName> :publish "true"^^xsd:boolean .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth> :publish "true"^^xsd:boolean .
+<http://rdf.telegraph.co.uk/ontology/movies#directed> :publish "true"^^xsd:boolean .
 
 
 
@@ -97,7 +97,7 @@
 
 
 
-<http://purl.org/dc/elements/1.1/title> :publish "true"^^xsd:boolean .
+<http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth> :publish "true"^^xsd:boolean .
 
 
 
@@ -106,6 +106,10 @@
 
 
 <http://rdf.telegraph.co.uk/ontology/movies#featuredIn> :publish "true"^^xsd:boolean .
+
+
+
+<http://purl.org/dc/elements/1.1/title> :publish "true"^^xsd:boolean .
 
 
 
