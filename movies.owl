@@ -111,6 +111,18 @@
 #################################################################
 
 
+###  http://purl.org/dc/elements/1.1/date
+
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:DatatypeProperty ;
+                                       
+                                       rdfs:label "has year of release"@en ;
+                                       
+                                       rdfs:domain :Movie ;
+                                       
+                                       rdfs:range xsd:dateTime .
+
+
+
 ###  http://purl.org/dc/elements/1.1/language
 
 <http://purl.org/dc/elements/1.1/language> rdf:type owl:DatatypeProperty ;

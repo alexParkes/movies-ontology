@@ -93,6 +93,10 @@
 
 
 
+<http://purl.org/dc/elements/1.1/date> :publish "true"^^xsd:boolean .
+
+
+
 <http://rdf.telegraph.co.uk/ontology/movies#hasGenre> :publish "true"^^xsd:boolean .
 
 
