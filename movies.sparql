@@ -13,7 +13,7 @@ WHERE { {
 $entity			?predicate 		?property .
 ?predicate 		rdf:type 		owl:DatatypeProperty .
 ?precicate		wp:publish 		"true"^^xsd:boolean .
-?predicate 		rdfs:label 		?predicateLabel
+?predicate 		rdfs:label 		?predicateLabel .
 
 } UNION {
 
@@ -23,7 +23,6 @@ $entity					?predicate 			?object .
 ?object 				?objectPredicate 	?property .
 ?objectPredicate 		rdf:type 			owl:DatatypeProperty .
 ?objectPredicate 		wp:publish 			"true"^^xsd:boolean .
-?object 				rdfs:label 			?objectLabel .
 ?objectPredicate 		rdfs:label 			?predicateLabel
 
 } }
