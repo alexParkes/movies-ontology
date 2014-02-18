@@ -202,7 +202,9 @@
 
 ###  http://rdf.telegraph.co.uk/ontology/movies#Movie
 
-:Movie rdf:type owl:Class .
+:Movie rdf:type owl:Class ;
+       
+       rdfs:label "Movie"@en .
 
 
 
