@@ -6,7 +6,7 @@ PREFIX wp: <http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotation
 
 
 
-SELECT ?predicateLabel ?property ?objectPredicateLabel ?objectProperty
+SELECT DISTINCT ?predicateLabel ?property ?objectPredicateLabel ?objectProperty
 
 WHERE { {
 	
