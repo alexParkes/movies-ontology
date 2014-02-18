@@ -107,11 +107,13 @@ marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		rdf:type	person:Marriage .
 marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		person:marriageTo	actor:Vanessa_Paradis .
 marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		event:begins		"1998" .
 marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		event:ends		"2012" .
+marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		dc:title 		"Marriage of Johnny Depp and Vanessa Paradis, 1998-2012"@en .
 
 marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		rdf:type	person:Marriage .
 marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		person:marriageTo	person:Joe_DiMaggio .
 marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		event:begins		"1954" .
 marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		event:ends		"1954" .
+marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		dc:title 		"Marriage of Marilyn Monroe and Joe DiMaggio, 1954-1954"@en .
 
 genre:Comedy 			dc:title 		"Comedy"@en .
 
