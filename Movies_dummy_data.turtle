@@ -95,6 +95,14 @@ movie:Serenity		dc:language					"English"@en .
 movie:Serenity		movieOntology:hasGenre 		genre:Sci-Fi .
 movie:Serenity		dc:date						"2005" .
 
+movie:Amelie		rdf:type					movieOntology:Movie .
+movie:Amelie		dc:title					"Amelie"@en .
+movie:Amelie		movieOntology:hasOriginalTitle		"Le Fabuleux Destin d'Amelie Poulain"@fr .
+movie:Amelie		dc:language					"English"@en .
+movie:Amelie		movieOntology:hasOriginalLanguage		"French"@en .
+movie:Amelie		movieOntology:hasGenre 		genre:Romantic_Comedy .
+movie:Amelie		dc:date						"2001" .
+
 marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		rdf:type	person:Marriage .
 marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		person:marriageTo	actor:Vanessa_Paradis .
 marriage:Johnny_Depp_and_Vanessa_Paradis_1998_2012		event:begins		"1998" .
