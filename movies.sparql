@@ -38,6 +38,8 @@ WHERE { {
 ?objectPredicate	wp:publish 			"true"^^xsd:boolean .
 ?objectPredicate 	rdfs:label 			?predicateLabel .
 ?object2			?object2Predicate	?property .
+?object2 			rdf:type 			?class .
+?class 				rdfs:label 			?classLabel .
 ?object2Predicate	rdf:type			owl:DatatypeProperty .
 ?object2Predicate	wp:publish 			"true"^^xsd:boolean .
 ?object2Predicate	rdfs:label 			?object2PredicateLabel
