@@ -92,7 +92,7 @@ movie:12_Years_a_Slave		dc:date						"2013" .
 movie:Serenity		rdf:type					movieOntology:Movie .
 movie:Serenity		dc:title					"Serenity"@en .
 movie:Serenity		dc:language					"English"@en .
-movie:Serenity		movieOntology:hasGenre 		genre:Sci-Fi .
+movie:Serenity		movieOntology:hasGenre 		genre:Science_Fiction .
 movie:Serenity		dc:date						"2005" .
 
 movie:Amelie		rdf:type					movieOntology:Movie .
@@ -112,3 +112,11 @@ marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		rdf:type	person:Marriage .
 marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		person:marriageTo	person:Joe_DiMaggio .
 marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		event:begins		"1954" .
 marriage:Marilyn_Monroe_and_Joe_DiMaggio_1954_1954		event:ends		"1954" .
+
+genre:Comedy 			dc:title 		"Comedy"@en .
+
+genre:Drama 			dc:title 		"Drama"@en .
+
+genre:Science_Fiction 			dc:title 		"Science Fiction"@en .
+
+genre:Romantic_Comedy 			dc:title 		"Romantic Comedy"@en .
