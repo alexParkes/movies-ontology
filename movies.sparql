@@ -6,7 +6,7 @@ PREFIX wp: <http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotation
 
 
 
-SELECT DISTINCT ?predicateLabel ?property ?objectPredicateLabel ?objectProperty
+SELECT DISTINCT ?predicateLabel ?property ?objectPredicateLabel ?objectProperty ?object2PredicateLabel ?object2Property
 
 WHERE { {
 	
@@ -24,6 +24,21 @@ WHERE { {
 ?object 				?objectPredicate 	?objectProperty .
 ?objectPredicate 		rdf:type 			owl:DatatypeProperty .
 ?objectPredicate 		wp:publish 			"true"^^xsd:boolean .
-?objectPredicate 		rdfs:label 			?objectPredicateLabel
+?objectPredicate 		rdfs:label 			?objectPredicateLabel .
 
-} }
+} UNION {
+
+?entity				?predicate 			?object .
+?predicate 			rdf:type			owl:ObjectProperty .
+?predicate 			wp:publish 			"true"^^xsd:boolean .
+?object 			?objectPredicate 	?object2 .
+?objectPredicate 	rdf:type 			owl:ObjectProperty .
+?objectPredicate	wp:publish 			"true"^^xsd:boolean .
+?objectPredicate 	rdfs:label 			?predicateLabel .
+?object2			?object2Predicate	?object2Property .
+?object2Predicate	rdf:type			owl:DatatypeProperty .
+?object2Predicate	wp:publish 			"true"^^xsd:boolean .
+?object2Predicate	rdfs:label 			?object2PredicateLabel
+
+
+}  }
