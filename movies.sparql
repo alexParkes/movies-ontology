@@ -6,23 +6,24 @@ PREFIX wp: <http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotation
 
 
 
-SELECT ?predicateLabel ?objectLabel ?property
+SELECT ?predicateLabel ?property ?objectPredicateLabel ?objectProperty
 
 WHERE { {
 	
-$entity			?predicate 		?property .
+?entity			?predicate 		?property .
 ?predicate 		rdf:type 		owl:DatatypeProperty .
 ?precicate		wp:publish 		"true"^^xsd:boolean .
 ?predicate 		rdfs:label 		?predicateLabel .
 
 } UNION {
 
-$entity					?predicate 			?object .
+?entity					?predicate 			?object .
 ?predicate 				rdf:type			owl:ObjectProperty .
 ?predicate 				wp:publish 			"true"^^xsd:boolean .
-?object 				?objectPredicate 	?property .
+?predicate 				rdfs:label 			?predicateLabel .
+?object 				?objectPredicate 	?objectProperty .
 ?objectPredicate 		rdf:type 			owl:DatatypeProperty .
 ?objectPredicate 		wp:publish 			"true"^^xsd:boolean .
-?objectPredicate 		rdfs:label 			?predicateLabel
+?objectPredicate 		rdfs:label 			?objectPredicateLabel
 
 } }
