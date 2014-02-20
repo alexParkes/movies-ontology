@@ -83,9 +83,9 @@
 
 
 
-###  http://xmlns.com/foaf/0.1/Name
+###  http://xmlns.com/foaf/0.1/name
 
-<http://xmlns.com/foaf/0.1/Name> rdf:type owl:DatatypeProperty ;
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
                                  
                                  rdfs:label "has name"@en ;
                                  
