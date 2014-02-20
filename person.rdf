@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://rdf.telegraph.co.uk/ontology/person#"
+     xml:base="http://rdf.telegraph.co.uk/ontology/person"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <owl:Ontology rdf:about="http://rdf.telegraph.co.uk/ontology/person">
+        <owl:imports rdf:resource="http://rdf.telegraph.co.uk/ontology/event"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rdf.telegraph.co.uk/ontology/person#hasMarriage -->
+
+    <owl:ObjectProperty rdf:about="http://rdf.telegraph.co.uk/ontology/person#hasMarriage">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label xml:lang="en">has marriage</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://rdf.telegraph.co.uk/ontology/event#agentOf"/>
+        <rdfs:range rdf:resource="http://rdf.telegraph.co.uk/ontology/person#Marriage"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdf.telegraph.co.uk/ontology/person#marriageTo -->
+
+    <owl:ObjectProperty rdf:about="http://rdf.telegraph.co.uk/ontology/person#marriageTo">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label xml:lang="en">marriage to</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://rdf.telegraph.co.uk/ontology/event#agent"/>
+        <rdfs:domain rdf:resource="http://rdf.telegraph.co.uk/ontology/person#Marriage"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has date of birth</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdf.telegraph.co.uk/ontology/person#hasPlaceOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://rdf.telegraph.co.uk/ontology/person#hasPlaceOfBirth">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has place of birth</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/Name">
+        <rdfs:label xml:lang="en">has name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/familyName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/familyName">
+        <rdfs:label xml:lang="en">has family name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/Name"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/gender -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/gender">
+        <rdfs:label xml:lang="en">has gender</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/givenName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/givenName">
+        <rdfs:label xml:lang="en">has given name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/Name"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rdf.telegraph.co.uk/ontology/person#Actor -->
+
+    <owl:Class rdf:about="http://rdf.telegraph.co.uk/ontology/person#Actor">
+        <rdfs:label xml:lang="en">Actor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://rdf.telegraph.co.uk/ontology/person#Artist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rdf.telegraph.co.uk/ontology/person#Artist -->
+
+    <owl:Class rdf:about="http://rdf.telegraph.co.uk/ontology/person#Artist">
+        <rdfs:label xml:lang="en">Artist</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rdf.telegraph.co.uk/ontology/person#Director -->
+
+    <owl:Class rdf:about="http://rdf.telegraph.co.uk/ontology/person#Director">
+        <rdfs:label xml:lang="en">Director</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://rdf.telegraph.co.uk/ontology/person#Artist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rdf.telegraph.co.uk/ontology/person#Marriage -->
+
+    <owl:Class rdf:about="http://rdf.telegraph.co.uk/ontology/person#Marriage">
+        <rdfs:label xml:lang="en">Marriage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://rdf.telegraph.co.uk/ontology/event#ArtificialEvent"/>
+        <rdfs:subClassOf rdf:resource="http://rdf.telegraph.co.uk/ontology/event#DynamicEvent"/>
+        <rdfs:comment xml:lang="en">We&apos;ve created an object to record marriages between entities of type Person: this permits us to record a start date and an end date (if any) on the marriage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

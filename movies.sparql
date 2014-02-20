@@ -2,44 +2,47 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX wp: <http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations#>
+PREFIX wp: <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#>
 
 
 
-SELECT DISTINCT ?predicateLabel ?property ?classLabel ?objectPredicateLabel ?object2PredicateLabel
+SELECT DISTINCT ?predicateLabel ?property ?object1 ?object1ClassLabel ?object1PredicateLabel ?object1Property ?object2 ?object2ClassLabel ?object2PredicateLabel ?object2Property
 
 WHERE { {
 	
-?entity			?predicate 		?property .
+<http://rdf.telegraph.co.uk/ontology/person#Actor/Johnny_Depp>		?predicate 		?property .
 ?predicate 		rdf:type 		owl:DatatypeProperty .
-?precicate		wp:publish 		"true"^^xsd:boolean .
+?predicate		wp:publish 		"true"^^xsd:boolean .
 ?predicate 		rdfs:label 		?predicateLabel .
 
 } UNION {
 
-?entity					?predicate 			?object .
-?object 				rdf:type			?class .
-?class 					rdfs:label 			?classLabel .
+<http://rdf.telegraph.co.uk/ontology/person#Actor/Johnny_Depp>					?predicate 			?object1 .
+?object1				rdf:type			?object1Class .
+?object1Class 			rdfs:label 			?object1ClassLabel .
 ?predicate 				rdf:type			owl:ObjectProperty .
 ?predicate 				wp:publish 			"true"^^xsd:boolean .
 ?predicate 				rdfs:label 			?predicateLabel .
-?object 				?objectPredicate 	?property .
-?objectPredicate 		rdf:type 			owl:DatatypeProperty .
-?objectPredicate 		wp:publish 			"true"^^xsd:boolean .
-?objectPredicate 		rdfs:label 			?objectPredicateLabel .
+?object1 				?object1Predicate 	?object1Property .
+?object1Predicate 		rdf:type 			owl:DatatypeProperty .
+?object1Predicate 		wp:publish 			"true"^^xsd:boolean .
+?object1Predicate 		rdfs:label 			?object1PredicateLabel .
 
 } UNION {
 
-?entity				?predicate 			?object .
+<http://rdf.telegraph.co.uk/ontology/person#Actor/Johnny_Depp>				?predicate 			?object1 .
+?object1            rdf:type            ?object1Class .
+?object1Class       rdfs:label          ?object1ClassLabel .
 ?predicate 			rdf:type			owl:ObjectProperty .
 ?predicate 			wp:publish 			"true"^^xsd:boolean .
-?object 			?objectPredicate 	?object2 .
-?objectPredicate 	rdf:type 			owl:ObjectProperty .
-?objectPredicate	wp:publish 			"true"^^xsd:boolean .
-?objectPredicate 	rdfs:label 			?predicateLabel .
-?object2			?object2Predicate	?property .
-?object2 			rdf:type 			?class .
-?class 				rdfs:label 			?classLabel .
+?predicate          rdfs:label          ?predicateLabel .
+?object1 			?object1Predicate 	?object2 .
+?object1Predicate 	rdf:type 			owl:ObjectProperty .
+?object1Predicate	wp:publish 			"true"^^xsd:boolean .
+?object1Predicate 	rdfs:label 			?object1PredicateLabel .
+?object2			?object2Predicate	?object2Property .
+?object2 			rdf:type 			?object2Class .
+?object2Class 		rdfs:label 			?object2ClassLabel .
 ?object2Predicate	rdf:type			owl:DatatypeProperty .
 ?object2Predicate	wp:publish 			"true"^^xsd:boolean .
 ?object2Predicate	rdfs:label 			?object2PredicateLabel
