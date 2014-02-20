@@ -57,7 +57,7 @@
 
 
 
-<http://xmlns.com/foaf/0.1/Name> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+<http://xmlns.com/foaf/0.1/name> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
 
 
 
