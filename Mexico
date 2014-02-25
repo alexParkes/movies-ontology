@@ -1,0 +1,10 @@
+@prefix ns1:    <http://rdf.telegraph.co.uk/resources/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix ns3:    <http://rdf.telegraph.co.uk/ontology/person#> .
+
+ns1:once_upon_a_time_in_mexico foaf:depiction  <http://upload.wikimedia.org/wikipedia/en/6/6d/Mexico_DVD.jpg> .
+
+ns1:once_upon_a_time_in_mexico								ns3:biography   "Once Upon a Time in Mexico is a 2003 American action film written, produced, edited, cinematographied, scored, and directed by Robert Rodriguez. It is the third and final film in Rodriguez's Mexico Trilogy, and is a sequel to El Mariachi (1992) and Desperado (1995). The film features Antonio Banderas in his second and final performance as El Mariachi. In the film, El Mariachi is recruited by CIA agent, Sheldon Sands (Johnny Depp), to kill Armando Barillo (Willem Dafoe), a Mexican drug lord who is planning a coup d'état against the President of Mexico. At the same time, El Mariachi seeks revenge against a corrupt general responsible for the death of his wife, Carolina (Salma Hayek)." .
+
+ns1:once_upon_a_time_in_mexico								dc:date	"2003" .
