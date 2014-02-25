@@ -8,23 +8,56 @@
 
 <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations> rdf:type owl:Ontology ;
                                                                  
-                                                                 owl:imports <http://rdf.telegraph.co.uk/ontology/movies> .
+                                                                 owl:imports <http://rdf.telegraph.co.uk/ontology/movies> ,
+                                                                             <http://www.w3.org/2002/07/owl> .
 
 
 #################################################################
 #
-#    Annotation properties
+#    Object Properties
 #
 #################################################################
 
 
-###  http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish
+###  http://rdf.telegraph.co.uk/ontology/movies#directed
 
-<http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> rdf:type owl:AnnotationProperty ;
-                                                                         
-                                                                         rdfs:label "publish"@en ;
-                                                                         
-                                                                         rdfs:range xsd:boolean .
+<http://rdf.telegraph.co.uk/ontology/movies#directed> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableObjectProperty> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#directedBy
+
+<http://rdf.telegraph.co.uk/ontology/movies#directedBy> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableObjectProperty> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#featured
+
+<http://rdf.telegraph.co.uk/ontology/movies#featured> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableObjectProperty> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#featuredIn
+
+<http://rdf.telegraph.co.uk/ontology/movies#featuredIn> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableObjectProperty> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#hasGenre
+
+<http://rdf.telegraph.co.uk/ontology/movies#hasGenre> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableObjectProperty> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/movies#includesMovie
+
+<http://rdf.telegraph.co.uk/ontology/movies#includesMovie> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableObjectProperty> .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableObjectProperty
+
+<http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableObjectProperty> rdf:type owl:ObjectProperty .
 
 
 
@@ -32,88 +65,94 @@
 
 #################################################################
 #
-#    Annotations
+#    Data properties
 #
 #################################################################
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#includesMovie> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://purl.org/dc/elements/1.1/date
+
+<http://purl.org/dc/elements/1.1/date> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDataProperty> .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#marriageTo> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://purl.org/dc/elements/1.1/language
+
+<http://purl.org/dc/elements/1.1/language> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDataProperty> .
 
 
 
-<http://xmlns.com/foaf/0.1/gender> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://purl.org/dc/elements/1.1/title
+
+<http://purl.org/dc/elements/1.1/title> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableHeading> .
 
 
 
-<http://purl.org/dc/elements/1.1/language> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://rdf.telegraph.co.uk/ontology/person#biography
+
+<http://rdf.telegraph.co.uk/ontology/person#biography> rdf:type owl:DatatypeProperty ;
+                                                       
+                                                       rdfs:label "has biography"@en ;
+                                                       
+                                                       rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDescription> .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasEndDate> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> :data .
+###  http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth
+
+<http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDataProperty> .
 
 
 
-<http://xmlns.com/foaf/0.1/name> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://rdf.telegraph.co.uk/ontology/person#hasPlaceOfBirth
+
+<http://rdf.telegraph.co.uk/ontology/person#hasPlaceOfBirth> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDataProperty> .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasMarriage> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDataProperty
+
+<http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDataProperty> rdf:type owl:DatatypeProperty .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#directedBy> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDescription
+
+<http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDescription> rdf:type owl:DatatypeProperty .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasStartDate> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> :data .
+###  http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableHeading
+
+<http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableHeading> rdf:type owl:DatatypeProperty .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/person#hasPlaceOfBirth> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableImage
+
+<http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableImage> rdf:type owl:DatatypeProperty .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#hasOriginalTitle> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://xmlns.com/foaf/0.1/depiction
+
+<http://xmlns.com/foaf/0.1/depiction> rdf:type owl:DatatypeProperty ;
+                                      
+                                      rdfs:label "depiction"@en ;
+                                      
+                                      rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableImage> .
 
 
 
-<http://rdf.telegraph.co.uk/ontology/movies#featured> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://xmlns.com/foaf/0.1/gender
+
+<http://xmlns.com/foaf/0.1/gender> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDataProperty> .
 
 
 
-<http://rdf.telegraph.co.uk/ontology#hasName> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+###  http://xmlns.com/foaf/0.1/name
 
-
-
-<http://rdf.telegraph.co.uk/ontology/movies#directed> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
-
-
-
-<http://purl.org/dc/elements/1.1/date> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
-
-
-
-<http://rdf.telegraph.co.uk/ontology/person#hasDateOfBirth> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
-
-
-
-<http://rdf.telegraph.co.uk/ontology/movies#hasGenre> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
-
-
-
-<http://rdf.telegraph.co.uk/ontology/movies#hasOriginalLanguage> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
-
-
-
-<http://purl.org/dc/elements/1.1/title> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
-
-
-
-<http://rdf.telegraph.co.uk/ontology/movies#featuredIn> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+<http://xmlns.com/foaf/0.1/name> rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableHeading> .
 
 
 

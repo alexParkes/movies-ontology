@@ -83,18 +83,6 @@
 
 
 
-###  http://xmlns.com/foaf/0.1/name
-
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
-                                 
-                                 rdfs:label "has name"@en ;
-                                 
-                                 rdfs:range xsd:string ;
-                                 
-                                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
-
-
-
 ###  http://xmlns.com/foaf/0.1/familyName
 
 <http://xmlns.com/foaf/0.1/familyName> rdf:type owl:DatatypeProperty ;
@@ -103,9 +91,9 @@
                                        
                                        rdfs:range xsd:string ;
                                        
-                                       rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/Name> ;
+                                       rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
                                        
-                                       rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+                                       rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/name> .
 
 
 
@@ -129,9 +117,21 @@
                                       
                                       rdfs:range xsd:string ;
                                       
-                                      rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/Name> ;
+                                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
                                       
-                                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+                                      rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/name> .
+
+
+
+###  http://xmlns.com/foaf/0.1/name
+
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
+                                 
+                                 rdfs:label "has name"@en ;
+                                 
+                                 rdfs:range xsd:string ;
+                                 
+                                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
 
 
 
@@ -184,6 +184,16 @@
                           <http://rdf.telegraph.co.uk/ontology/event#DynamicEvent> ;
           
           rdfs:comment "We've created an object to record marriages between entities of type Person: this permits us to record a start date and an end date (if any) on the marriage."@en .
+
+
+
+###  http://rdf.telegraph.co.uk/ontology/person#Musician
+
+:Musician rdf:type owl:Class ;
+          
+          rdfs:label "Musician"@en ;
+          
+          rdfs:subClassOf :Artist .
 
 
 
