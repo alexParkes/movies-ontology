@@ -1,0 +1,25 @@
+@prefix food: <http://rdf.telegraph.co.uk/ontology/food#> .
+@prefix cheese: <http://rdf.telegraph.co.uk/ontology/cheese#> .
+@prefix person: <http://rdf.telegraph.co.uk/ontology/person#> .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix resource: <http://rdf.telegraph.co.uk/resources/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+resource:roule		a							food:Cheese ;
+					dc:title					"Roule"@en ;
+					foaf:depiction				<http://www.atalanta1.com/img/products/fullsize/pic2636.jpg>  ;
+					person:biography						"Roule Cheese is a French cheese, with a soft and creamy texture, that is usually flavoured with herbs and garlic. It was initially made by the Tablanette Fromagerie in the 1980s in the Centre region of France. About 45 percent of its calories come from fat. It has been made in the northwestern part of France by Rian's company since the 1980s, has the appearance of a jelly roll and is distinguished by its flavouring of garlic and herbs." ;
+					food:hasCountryOfOrigin		"France" .
+
+food:Cheese rdf:type owl:Class ;
+       
+       rdfs:label "Cheese"@en .
+
+
+food:hasCountryOfOrigin	rdfs:subPropertyOf <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publishableDataProperty> ;
+						rdfs:label		"has country of origin"@en ;
+						rdf:type owl:DatatypeProperty .
