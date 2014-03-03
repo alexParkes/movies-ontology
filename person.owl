@@ -8,7 +8,8 @@
 
 <http://rdf.telegraph.co.uk/ontology/person> rdf:type owl:Ontology ;
                                              
-                                             owl:imports <http://rdf.telegraph.co.uk/ontology/event> .
+                                             owl:imports <http://rdf.telegraph.co.uk/ontology/event> ,
+                                                         <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations> .
 
 
 #################################################################
@@ -83,15 +84,9 @@
 
 
 
-###  http://xmlns.com/foaf/0.1/name
+###  http://xmlns.com/foaf/0.1/Name
 
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
-                                 
-                                 rdfs:label "has name"@en ;
-                                 
-                                 rdfs:range xsd:string ;
-                                 
-                                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/Name> rdf:type owl:DatatypeProperty .
 
 
 
@@ -132,6 +127,18 @@
                                       rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/Name> ;
                                       
                                       rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
+
+
+###  http://xmlns.com/foaf/0.1/name
+
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
+                                 
+                                 rdfs:label "has name"@en ;
+                                 
+                                 rdfs:range xsd:string ;
+                                 
+                                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
 
 
 

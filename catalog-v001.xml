@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://rdf.telegraph.co.uk/ontology/web-publishing-annotations" uri="web-publishing-annotations.owl"/>
     <uri id="User Entered Import Resolution" name="http://rdf.telegraph.co.uk/ontology/movies" uri="movies.owl"/>
     <uri id="User Entered Import Resolution" name="http://rdf.telegraph.co.uk/ontology/Person" uri="person.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1392897848360" name="http://rdf.telegraph.co.uk/ontology/event" uri="event.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1392897848360" name="http://rdf.telegraph.co.uk/ontology/movies" uri="movies.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1392897848360" name="http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations" uri="annotation.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1392897848360" name="http://rdf.telegraph.co.uk/ontology/person" uri="person.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1393862954045" name="http://rdf.telegraph.co.uk/ontology/event" uri="event.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1393862954045" name="http://rdf.telegraph.co.uk/ontology/movies" uri="movies.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1393862954045" name="http://rdf.telegraph.co.uk/ontology/movies-web-publishing-annotations" uri="annotation.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1393862954045" name="http://rdf.telegraph.co.uk/ontology/person" uri="person.rdf"/>
     </group>
 </catalog>

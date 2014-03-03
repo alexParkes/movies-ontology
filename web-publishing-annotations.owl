@@ -6,9 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations> .
 
-<http://rdf.telegraph.co.uk/ontology/web-publishing-annotations> rdf:type owl:Ontology ;
-                                                                 
-                                                                 owl:imports <http://rdf.telegraph.co.uk/ontology/movies> .
+<http://rdf.telegraph.co.uk/ontology/web-publishing-annotations> rdf:type owl:Ontology .
 
 
 #################################################################
@@ -57,15 +55,15 @@
 
 
 
-<http://xmlns.com/foaf/0.1/name> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
-
-
-
 <http://rdf.telegraph.co.uk/ontology/person#hasMarriage> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
 
 
 
 <http://rdf.telegraph.co.uk/ontology/movies#directedBy> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
+
+
+
+<http://xmlns.com/foaf/0.1/name> <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations#publish> "true"^^xsd:boolean .
 
 
 

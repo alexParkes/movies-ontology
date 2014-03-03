@@ -8,7 +8,8 @@
 
 <http://rdf.telegraph.co.uk/ontology/movies> rdf:type owl:Ontology ;
                                              
-                                             owl:imports <http://rdf.telegraph.co.uk/ontology/Person> .
+                                             owl:imports <http://rdf.telegraph.co.uk/ontology/Person> ,
+                                                         <http://rdf.telegraph.co.uk/ontology/web-publishing-annotations> .
 
 
 #################################################################
